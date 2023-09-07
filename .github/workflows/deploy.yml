@@ -17,10 +17,9 @@ jobs:
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            cd /var/www/alaska
+            cd /var/www/notblizzard
             git pull
             npm install
-            npx prisma migrate dev
             npm run build
-            pm2 restart alaska
+            pm2 restart notblizzard
             echo 'done'
