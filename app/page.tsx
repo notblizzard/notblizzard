@@ -1,113 +1,353 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import Head from "next/head";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Link from "next/link";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <>
+      <main className="flex min-h-screen flex-col justify-between py-24 px-20">
+        <p className="text-7xl text-white">
+          Hello! My name is <span className="text-sky-400">Blizzard</span> and I
+          am a{" "}
+          <span className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Full Stack Web Developer.{" "}
+          </span>
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+        <div>
+          <p className="text-4xl text-white mt-24">Technologies I Use</p>
+          <div className="flex flex-wrap">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              height={65}
+              width={65}
+              alt="Typescript"
+            />{" "}
+            <i className="devicon-nextjs-original text-white text-7xl" />
+            <Image src="/Vite.js.png" height={65} width={65} alt="Vite" />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              height={65}
+              width={65}
+              alt="React"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+              height={65}
+              width={65}
+              alt="DigitalOcean"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+              height={65}
+              width={65}
+              alt="Laravel"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              height={65}
+              width={65}
+              alt="Node.js"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              height={65}
+              width={65}
+              alt="PHP"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              height={65}
+              width={65}
+              alt="PostgreSQL"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+              height={65}
+              width={65}
+              alt="TailwindCSS"
+            />{" "}
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              height={65}
+              width={65}
+              alt="VSCode"
+            />{" "}
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+        <div>
+          {" "}
+          <p className="text-4xl text-white mt-24">Projects</p>
+          <div className="flex flex-wrap gap-1">
+            <Card className="w-[33%] bg-slate-900 text-white border-none rounded-none">
+              <CardHeader>
+                <CardTitle>Antarctica</CardTitle>
+                <CardDescription>A Twitter/Bluesky Clone</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Link href="https://antarctica.notblizzard.dev" target="_blank">
+                  <Image
+                    src="/antarctica.png"
+                    width={1000}
+                    height={1000}
+                    alt="antarctica"
+                  />
+                </Link>
+              </CardContent>
+              <CardFooter>
+                <div className="flex flex-col">
+                  <p>Technologies used</p>
+                  <div className="flex flex-row">
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Typescript"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Next.js"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      height={30}
+                      width={30}
+                      alt="React"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                      height={30}
+                      width={30}
+                      alt="DigitalOcean"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      height={30}
+                      width={30}
+                      alt="PostgreSQL"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                      height={30}
+                      width={30}
+                      alt="TailwindCSS"
+                    />{" "}
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card className="w-[33%] bg-slate-900 text-white border-none rounded-none">
+              <CardHeader>
+                <CardTitle>K2</CardTitle>
+                <CardDescription>A simple URL shortener</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Link href="https://k2.notblizzard.dev" target="_blank">
+                  <Image src="/k2.png" width={1000} height={1000} alt="k2" />
+                </Link>
+              </CardContent>
+              <CardFooter>
+                <div className="flex flex-col">
+                  <p>Technologies used</p>
+                  <div className="flex flex-row">
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Typescript"
+                    />{" "}
+                    <Image
+                      src="/Vite.js.png"
+                      height={30}
+                      width={30}
+                      alt="Vite"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      height={30}
+                      width={30}
+                      alt="React"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                      height={30}
+                      width={30}
+                      alt="DigitalOcean"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      height={30}
+                      width={30}
+                      alt="PostgreSQL"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                      height={30}
+                      width={30}
+                      alt="TailwindCSS"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Python"
+                    />{" "}
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card className="w-[33%] bg-slate-900 text-white border-none rounded-none">
+              <CardHeader>
+                <CardTitle>Everest</CardTitle>
+                <CardDescription>A Deviantart clone</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Link href="https://everest.notblizzard.dev" target="_blank">
+                  <Image
+                    src="/everest.png"
+                    width={1000}
+                    height={1000}
+                    alt="everest"
+                  />
+                </Link>
+              </CardContent>
+              <CardFooter>
+                <div className="flex flex-col">
+                  <p>Technologies used</p>
+                  <div className="flex flex-row">
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Typescript"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                      height={30}
+                      width={30}
+                      alt="PHP"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+                      height={30}
+                      width={30}
+                      alt="Laravel"
+                    />{" "}
+                    <Image
+                      src="/Vite.js.png"
+                      height={30}
+                      width={30}
+                      alt="Vite"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      height={30}
+                      width={30}
+                      alt="React"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                      height={30}
+                      width={30}
+                      alt="DigitalOcean"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      height={30}
+                      width={30}
+                      alt="PostgreSQL"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                      height={30}
+                      width={30}
+                      alt="TailwindCSS"
+                    />{" "}
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card className="w-[33%] bg-slate-900 text-white border-none rounded-none">
+              <CardHeader>
+                <CardTitle>Alaska</CardTitle>
+                <CardDescription>A Medium clone</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Link href="https://alaska.notblizzard.dev" target="_blank">
+                  <Image
+                    src="/alaska.png"
+                    width={1000}
+                    height={1000}
+                    alt="k2"
+                  />
+                </Link>
+              </CardContent>
+              <CardFooter>
+                <div className="flex flex-col">
+                  <p>Technologies used</p>
+                  <div className="flex flex-row">
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Typescript"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                      height={30}
+                      width={30}
+                      alt="Next.js"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      height={30}
+                      width={30}
+                      alt="React"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                      height={30}
+                      width={30}
+                      alt="DigitalOcean"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      height={30}
+                      width={30}
+                      alt="PostgreSQL"
+                    />{" "}
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                      height={30}
+                      width={30}
+                      alt="TailwindCSS"
+                    />{" "}
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+        <div>
+          <p className="text-4xl text-white mt-24">
+            <Link
+              href="https://github.com/notblizzard"
+              target="_blank"
+              className="underline decoration-sky-400"
+            >
+              GitHub
+            </Link>
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        </div>
+      </main>
+    </>
+  );
 }
